@@ -9,7 +9,9 @@ document.addEventListener('DOMContentLoaded', () => {
         screen2.classList.remove('hidden');
     });
 
-    // Función para mover el botón
+    noBtn.addEventListener('mouseover', moveButton);
+    noBtn.addEventListener('click', moveButton);
+
     function moveButton() {
         const x = Math.random() * (window.innerWidth - noBtn.offsetWidth);
         const y = Math.random() * (window.innerHeight - noBtn.offsetHeight);
@@ -17,21 +19,4 @@ document.addEventListener('DOMContentLoaded', () => {
         noBtn.style.left = `${x}px`;
         noBtn.style.top = `${y}px`;
     }
-
-    // Eventos para PC (mouse)
-    noBtn.addEventListener('mouseover', moveButton);
-    noBtn.addEventListener('click', moveButton);
-
-    // Eventos para celular (touch)
-    noBtn.addEventListener('touchstart', (e) => {
-        e.preventDefault(); // Previene el zoom y scroll al tocar
-        moveButton();
-    });
-
-    noBtn.addEventListener('touchmove', (e) => {
-        e.preventDefault(); // Previene que se mueva la pantalla mientras se arrastra
-    });
-
-    // Opcional: Animación suave al mover el botón
-    noBtn.style.transition = 'left 0.2s ease, top 0.2s ease';
 });
