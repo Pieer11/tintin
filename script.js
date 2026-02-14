@@ -11,6 +11,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     noBtn.addEventListener('mouseover', moveButton);
     noBtn.addEventListener('click', moveButton);
+    noBtn.addEventListener('touchstart', (e) => {
+        e.preventDefault(); // Previene el zoom en móvil
+        moveButton();
+    });
 
     function moveButton() {
         const x = Math.random() * (window.innerWidth - noBtn.offsetWidth);
