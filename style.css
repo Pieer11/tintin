@@ -4,6 +4,7 @@
     padding: 0;
     box-sizing: border-box;
     cursor: url('1.png'), auto !important;
+
 }
 
 body, html {
@@ -21,8 +22,7 @@ body, html {
     left: 0;
     width: 100vw;
     height: 100vh;
-    background-size: cover;
-    background-position: center;
+    background-size: 100% 100%; 
     display: flex;
     justify-content: center;
     align-items: center;
@@ -34,95 +34,99 @@ body, html {
 
 #screen1 {
     background-image: url('img/mi_fondo.png');
+    width: 70%;
+    margin-left: 15%;
 }
 
 .safe-zone-screen1 {
-    width: 100%;
-    height: 100%;
+    width: 80%; 
+    height: 80%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
-    position: relative;
 }
 
 .main-question {
-    font-size: 5rem;
-    margin-bottom: 3rem;
+    font-size: 5vh; 
+    margin-bottom: 5vh;
+    margin-top: 800px !important;
     letter-spacing: 5px;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
-    margin-top: 600px !important;
 }
 
 .buttons-container {
     display: flex;
-    gap: 350px;
-    margin-bottom: 2rem;
-    z-index: 10;
-}
-
-.btn, #noBtn {
-    padding: 15px 50px;
-    font-size: 3rem;
-    border: none;
-    border-radius: 30px;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    font-weight: 900;
-    font-family: 'Patrick Hand', cursive;
-    transition: all 0.3s ease;
+    gap: 350px; 
+    margin-bottom: -5vh;
 }
 
 .btn {
+    padding: 10px 30px;
+    font-size: 5vh;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
     color: #52ca76;
     background-color: #e6f8ec;
-    box-shadow: 0 4px 6px rgba(82, 202, 118, 0.2);
+    font-weight: 900;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(82, 202, 118, 0.2); 
 }
 
 .btn:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(82, 202, 118, 0.4);
-    background-color: #dcfce6;
+    transform: translateY(-5px); 
+    box-shadow: 0 10px 20px rgba(82, 202, 118, 0.4); 
+    background-color: #dcfce6; 
 }
 
 #noBtn {
+    padding: 10px 30px;
+    font-size: 5vh;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
     color: #ff5044;
     background-color: #fee4e0;
-    box-shadow: 0 4px 6px rgba(255, 80, 68, 0.2);
+    font-weight: 900;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(255, 80, 68, 0.2); 
 }
 
 #noBtn:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(255, 80, 68, 0.4);
-    background-color: #fddbd6;
+    transform: translateY(-5px); 
+    box-shadow: 0 10px 20px rgba(255, 80, 68, 0.4); 
+    background-color: #fddbd6; 
 }
 
 .bottom-heart {
-    height: 650px;
+    height: 650px; 
     width: auto;
-    position: absolute;
-    bottom: 50px;
-    left: 50%;
-    transform: translateX(-50%);
     margin-bottom: 550px !important;
+    
 }
+
 
 #screen2 {
     background-image: url('img/fondoo.png');
+    width: 70%;
+    margin-left: 15%;
+    display: block; 
     position: relative;
-    overflow: hidden;
 }
 
 #screen2 .notes-title { 
     position: absolute;
     top: 20%;      
     left: 38%;     
-    font-size: 4rem; 
-    letter-spacing: 5px;
-    z-index: 2;
+    font-size: 4vh; 
+    letter-spacing: 5px; 
 }
 
 #screen2 .title-img { 
@@ -130,8 +134,7 @@ body, html {
     top: 25%;      
     right: 45%;    
     height: 40vh;  
-    width: auto;
-    z-index: 2;
+    width: auto; 
 }
 
 #screen2 .film-strip {
@@ -140,15 +143,16 @@ body, html {
     left: -5%;     
     height: 75vh;  
     width: auto;
-    z-index: 1;
 }
+
 
 #screen2 .col-right img:nth-child(1) { 
     position: absolute;
     top: 8%;       
     right: 30%;     
     height: 20vh;   
-    z-index: 3;
+    z-index: 1;
+
 }
 
 #screen2 .letter-img {
@@ -156,15 +160,14 @@ body, html {
     top: 10%;      
     right: 10%;    
     height: 80vh;  
-    z-index: 2;
 }
+
 
 #screen2 .col-right img:nth-child(3) { 
     position: absolute;
     top: 68%;       
     right: 35%;     
     height: 25vh;   
-    z-index: 3;
 }
 
 #screen2 .calendar-img {
@@ -172,7 +175,6 @@ body, html {
     bottom: 10%;     
     right: 47%;     
     height: 35vh;   
-    z-index: 3;
 }
 
 .corazon {
@@ -181,181 +183,172 @@ body, html {
     pointer-events: none; 
 }
 
-.c1 { top: 20%; left: 10%; width: 150px; }
-.c2 { top: 10%; right: 10%; width: 120px; }
-.c3 { bottom: 10%; left: 10%; width: 150px; }
-.c4 { bottom: 10%; right: 10%; width: 120px; }
-.c5 { top: 50%; left: 45%; width: 120px; }
-.c6 { top: 15%; left: 30%; width: 150px; }
-.c7 { top: 75%; left: 28%; width: 120px; }
-.c8 { top: 15%; right: 30%; width: 75px; }
-.c9 { bottom: 10%; left: 65%; width: 150px; }
-.c10 { top: 40%; right: 10%; width: 150px; }
 
+.c1 {
+    top: 20%;
+    left: 10%;
+    width: 150px;
+}
+
+.c2 {
+    top: 10%;
+    right: 10%; 
+    width: 120px;
+}
+
+.c3 {
+    bottom: 10%; 
+    left: 10%;
+    width: 150px;
+}
+
+.c4 {
+    bottom: 10%;
+    right: 10%;
+    width: 120px;
+}
+
+.c5 {
+    top: 50%;
+    left: 45%; 
+    width: 120px;
+}
+
+.c6 {
+    top: 15%;
+    left: 30%;
+    width: 150px;
+}
+
+.c7 {
+    top: 75%;
+    left: 28%;
+    width: 120px;
+}
+
+.c8 {
+    top: 15%;
+    right: 30%;
+    width: 75px;
+}
+
+.c9 {
+    bottom: 10%;
+    left: 65%;
+    width: 150px;
+}
+
+.c10 {
+    top: 40%;
+    right: 10%;
+    width: 150px;
+}
 /* =========================
-   📱 MODO CELULAR - EXACTAMENTE IGUAL
+   📱 MODO CELULAR
    ========================= */
 @media (max-width: 768px) {
+
+    /* Ajuste general */
     body, html {
-        overflow: hidden;
+        overflow: auto;
+        font-size: 1rem;
     }
 
-    /* PANTALLA 1 - CELULAR */
-    #screen1 {
-        background-size: cover;
-        width: 100vw;
-        height: 100vh;
-    }
-
-    .safe-zone-screen1 {
-        transform: scale(0.45); /* Escala todo proporcionalmente */
-        transform-origin: center center;
+    .screen {
         width: 100%;
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+        height: 100vh;
+        background-size: cover;
+    }
+
+    /* ---------- SCREEN 1 ---------- */
+
+    #screen1 {
+        width: 100%;
+        margin-left: 0;
     }
 
     .main-question {
-        font-size: 5rem;
-        margin-top: 600px !important;
-        margin-bottom: 3rem;
-        transform: scale(1); /* Mantiene el texto legible */
+        font-size: 3vh;
+        margin-top: 0 !important;
+        margin-bottom: 3vh;
+        letter-spacing: 2px;
     }
 
     .buttons-container {
-        gap: 350px;
+        flex-direction: column;
+        gap: 20px;
     }
 
-    .btn, #noBtn {
-        font-size: 3rem;
-        padding: 15px 50px;
+    .btn,
+    #noBtn {
+        font-size: 3vh;
+        padding: 10px 20px;
     }
 
     .bottom-heart {
-        height: 650px;
-        margin-bottom: 550px !important;
-        bottom: 50px;
+        height: 280px;
+        top: 0;
+        left: 0;
+        margin: 0;
     }
 
-    /* PANTALLA 2 - CELULAR */
+    /* ---------- SCREEN 2 ---------- */
+
     #screen2 {
-        background-size: cover;
-        width: 100vw;
-        height: 100vh;
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .notes-title {
         position: relative;
-        overflow: hidden;
+        top: 0;
+        left: 0;
+        text-align: center;
+        font-size: 3vh;
+        margin-bottom: 10px;
     }
 
-    /* Aplicamos zoom out a toda la pantalla 2 */
-    #screen2 .notes-title,
-    #screen2 .title-img,
-    #screen2 .film-strip,
-    #screen2 .col-right img,
-    #screen2 .letter-img,
-    #screen2 .calendar-img {
-        transform: scale(0.45);
-        transform-origin: center center;
-    }
-
-    /* Ajustamos posiciones específicas para que todo quepa */
-    #screen2 .notes-title {
-        top: 15%;
-        left: 30%;
-        font-size: 4rem;
-    }
-
-    #screen2 .title-img {
-        top: 18%;
-        right: 38%;
-        height: 40vh;
-    }
-
-    #screen2 .film-strip {
-        top: 5%;
-        left: -15%;
-        height: 75vh;
-    }
-
-    #screen2 .col-right img:nth-child(1) {
-        top: 2%;
-        right: 20%;
-        height: 20vh;
-    }
-
-    #screen2 .letter-img {
-        top: 3%;
-        right: 0%;
-        height: 80vh;
-    }
-
-    #screen2 .col-right img:nth-child(3) {
-        top: 60%;
-        right: 25%;
+    .title-img {
+        position: relative;
+        top: 0;
+        right: 0;
         height: 25vh;
+        display: block;
+        margin: 0 auto 20px;
     }
 
-    #screen2 .calendar-img {
-        bottom: 2%;
-        right: 40%;
-        height: 35vh;
+    .content-grid {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
-    /* Corazones escalados */
+    .col-left {
+        display: none; /* Oculta la tira en celular */
+    }
+
+    .col-right img {
+        position: relative !important;
+        top: 0 !important;
+        right: 0 !important;
+        left: 0 !important;
+        bottom: 0 !important;
+        height: auto;
+        width: 80%;
+        margin: 10px auto;
+        display: block;
+    }
+
+    .letter-img {
+        width: 90%;
+    }
+
+    .calendar-img {
+        width: 60%;
+    }
+
+    /* Corazones flotantes (más pequeños) */
     .corazon {
-        transform: scale(0.45);
-        transform-origin: center center;
-    }
-
-    .c1 { top: 15%; left: 5%; }
-    .c2 { top: 5%; right: 5%; }
-    .c3 { bottom: 5%; left: 5%; }
-    .c4 { bottom: 5%; right: 5%; }
-    .c5 { top: 45%; left: 40%; }
-    .c6 { top: 10%; left: 20%; }
-    .c7 { top: 70%; left: 20%; }
-    .c8 { top: 10%; right: 20%; }
-    .c9 { bottom: 5%; left: 55%; }
-    .c10 { top: 35%; right: 5%; }
-}
-
-/* Ajuste para pantallas muy pequeñas */
-@media (max-width: 480px) {
-    .safe-zone-screen1 {
-        transform: scale(0.4);
-    }
-    
-    #screen2 .notes-title,
-    #screen2 .title-img,
-    #screen2 .film-strip,
-    #screen2 .col-right img,
-    #screen2 .letter-img,
-    #screen2 .calendar-img {
-        transform: scale(0.4);
-    }
-    
-    .corazon {
-        transform: scale(0.4);
-    }
-}
-
-@media (max-width: 380px) {
-    .safe-zone-screen1 {
-        transform: scale(0.35);
-    }
-    
-    #screen2 .notes-title,
-    #screen2 .title-img,
-    #screen2 .film-strip,
-    #screen2 .col-right img,
-    #screen2 .letter-img,
-    #screen2 .calendar-img {
-        transform: scale(0.35);
-    }
-    
-    .corazon {
-        transform: scale(0.35);
+        width: 60px !important;
     }
 }
